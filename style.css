@@ -26,6 +26,7 @@ h1 {
     display: inline-block;
     margin: 50px 50px;
     cursor: pointer;
+
 }
 
 .button:hover {
@@ -33,18 +34,15 @@ h1 {
 }
 
 .button h3 {
-    font-family: "Helvetica", "Condensed Black", bold;
+    font-family: "Helvetica", "Condensed Black, bold";
     font-size: 25px;
     margin: 0px;
 }
 
-.topnav button {
-    float: right;
-    margin: -60px 100px 0px 100px;
-    border-style: solid;
-}
 
-.topnav input[type=text] {
+
+
+#searchBar {
     float: left;
     padding: 15px 1100px 15px 23px;
     border-style: solid;

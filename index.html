@@ -2,37 +2,57 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Ghibli List</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>The Ghibli List</title>
+  <link rel="shortcut icon" href="">
+
+  <!--FIREBASE-->
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-storage.js"></script>
+
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <img src="ghibli-logo.jpg" alt="Ghibli Logo" style="float:left;width:250px;height:155px;">
-            <h1>The Ghibli List</h1>
-        </div>
 
-        <main>
+  <header>
+    <div class="header">
+      <img src="ghibli-logo.jpg" alt="Ghibli Logo" style="float:left;width:250px;height:155px;" />
+      <h1>The Ghibli List</h1>
+    </div>
+  </header>
 
-            <button type="button" class="button" onclick="alert('Hello world!')">
-                <h3>Randomize</h3>
-            </button>
+  <button type="button" class="button" id="btn-logout" href="#">
+    <h3>Log Out</h3>
+  </button>
 
-            <div class="topnav">
-                <input type="text" placeholder="Search Your Ghibli..">
+  <!--DROP DOWN MOVIE TITLES-->
+  <div id="root">
+    <select name="movies" id="select-movies">
+      <option value=""></option>
+    </select>
+  </div>
 
-                <button type="button" class="button" onclick="alert('Hello world!')">
-                    <h3>Search</h3>
-                </button>
-            </div>
+  <!--TITLE, YEAR AND DESCRIPTION-->
+  <div id="movie-details"></div>
 
-        </main>
+  <form action="">
+    <input type="text" id="input-txt">
+    <input type="submit" value="Submit" id="submit-btn">
+  </form>
 
-    </header>
+
 </body>
+<script src="index.js"></script>
+<script src="login.js"></script>
+
+<script>
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (!user) {
+      window.location.href = "log-in.html";
+    }
+  });
+</script>
 
 </html>
