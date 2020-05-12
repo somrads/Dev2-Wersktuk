@@ -55,17 +55,19 @@ async function logInButton() {
 
 }
 
-async function buttons() {
-  let logout = document.getElementById("btn-logout"); // log out
-  let signUp = document.getElementById("btn-signup"); // sign up
-  if (logout) {
-    logout.addEventListener('click', logOutButton);
-  }
-  if (signUp) {
-    signUp.addEventListener('click', signUpButton);
-  }
 
+let logout = document.getElementById("btn-logout"); // log out
+if (logout) {
+  logout.addEventListener('click', logOutButton);
 }
+
+
+let signUp = document.getElementById("btn-signup"); // sign up
+if (signUp) {
+  signUp.addEventListener('click', signUpButton);
+}
+
+
 
 async function logOutButton() {
   firebase.auth().signOut();
@@ -105,7 +107,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   await getMovieData();
   await movieOptionTags(allMovieData);
   await watchedMovies();
-  await buttons();
+
 
   //MOVIE DETAILS
   const selectTag = document.querySelector('select');
