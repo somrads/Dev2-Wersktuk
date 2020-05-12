@@ -9,8 +9,7 @@
   <!--FIREBASE-->
   <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
 
 </head>
 
@@ -23,12 +22,19 @@
     </div>
   </header>
 
-  <button type="button" class="button" id="btn-logout" href="#">
+
+  <!--LOG OUT BUTTON-->
+  <button type="button" class="button" id="btn-logout">
     <h3>Log Out</h3>
   </button>
 
+  <!--WATCHED BUTTON-->
+  <button type="button" class="button" id="btn-watched">
+    <h3>Watched</h3>
+  </button>
+
   <!--DROP DOWN MOVIE TITLES-->
-  <div id="root">
+  <div class="dropdown">
     <select name="movies" id="select-movies">
       <option value=""></option>
     </select>
@@ -37,15 +43,15 @@
   <!--TITLE, YEAR AND DESCRIPTION-->
   <div id="movie-details"></div>
 
-  <form action="">
-    <input type="text" id="input-txt">
-    <input type="submit" value="Submit" id="submit-btn">
-  </form>
+  <!--WATCHED-->
+  <div id="watched-movies">
+  </div>
 
 
 </body>
+
 <script src="index.js"></script>
-<script src="login.js"></script>
+
 
 <script>
   firebase.auth().onAuthStateChanged(function (user) {

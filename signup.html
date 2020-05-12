@@ -2,14 +2,37 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <header>
+        <div class="header">
+            <img src="ghibli-logo.jpg" alt="Ghibli Logo" style="float:left;width:250px;height:155px;" />
+            <h1>The Ghibli List</h1>
+        </div>
+    </header>
+
     <title>Sign Up</title>
     <style>
-        .main-div,
-        .mini-text {
+        h3 {
+            font-family: "Helvetica", "Condensed Black";
+        }
+
+        p {
+            font-family: "Helvetica", "Condensed Black";
+            color: black
+        }
+
+        .main-div {
             width: 20%;
             margin: 0px auto;
             margin-top: 150px;
             padding: 20px;
+        }
+
+        .mini-text {
+            margin-top: 0px;
+            padding: 20px;
+            width: 20%;
+            margin: 0px auto;
         }
 
         .main-div input {
@@ -29,9 +52,9 @@
 
         .main-div button,
         .logged-in button {
-            background: #5d8ffc;
+            background: #019BF1;
             color: #fff;
-            border: 1px solid #5d8ffc;
+            border: 1px solid #019BF1;
             border-radius: 5px;
             padding: 15px;
             display: block;
@@ -41,16 +64,15 @@
         .main-div button:hover,
         .logged-in button:hover {
             background: #fff;
-            color: #5d8ffc;
-            border: 1px solid #5d8ffc;
+            color: #019BF1;
+            border: 1px solid #019BF1;
             cursor: pointer;
         }
     </style>
     <!--FIREBASE-->
     <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
 
 </head>
 
@@ -65,13 +87,13 @@
 
 
     <div class="mini-text">
-        <a href="log-in.html">
+        <a href="log-in.html" style="text-decoration: none;">
             <p>Already have an account?</p>
         </a>
 
     </div>
 
-    <script src="login.js"></script>
+    <script src="index.js"></script>
     <script>
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {

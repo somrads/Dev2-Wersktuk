@@ -1,3 +1,8 @@
+body {
+    margin: 0px;
+}
+
+
 .header {
     margin: 0px;
     padding: 10px;
@@ -7,13 +12,20 @@
     font-size: 30px;
 }
 
-body {
-    margin: 0px;
-}
+
 
 h1 {
     padding: 0px 230px;
     font-family: "Helvetica", "Condensed Black";
+}
+
+h3 {
+    font-family: "Helvetica", "Condensed Black";
+}
+
+p {
+    font-family: "Helvetica", "Condensed Black";
+    color: black
 }
 
 .button {
@@ -27,11 +39,21 @@ h1 {
     margin: 50px 50px;
     cursor: pointer;
 
+
 }
 
 .button:hover {
-    color: white;
+    background: #fff;
+    color: #019BF1;
+    border: 1px solid #019BF1;
+    cursor: pointer;
 }
+
+#watched-movies p:hover {
+    color: white;
+    cursor: pointer;
+}
+
 
 .button h3 {
     font-family: "Helvetica", "Condensed Black, bold";
@@ -40,13 +62,97 @@ h1 {
 }
 
 
+.main-div,
+.logged-in {
+    width: 20%;
+    margin: 0px auto;
+    margin-top: 150px;
+    padding: 20px;
 
+}
 
-#searchBar {
-    float: left;
-    padding: 15px 1100px 15px 23px;
-    border-style: solid;
-    margin-top: 10px;
+.mini-text {
+    margin-top: 0px;
+    padding: 20px;
+    width: 20%;
+    margin: 0px auto;
+}
+
+.main-div input {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 15px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.main-div input:focus {
+    border: 1px solid #777;
+}
+
+.main-div button,
+.logged-in button {
+    background: #019BF1;
+    color: #fff;
+    border: 1px solid #019BF1;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+    width: 110%;
+}
+
+.main-div button:hover,
+.logged-in button:hover {
+    background: #fff;
+    color: #019BF1;
+    border: 1px solid #019BF1;
+    cursor: pointer;
+}
+
+#select-movies {
+    background-color: #019BF1;
+    color: white;
     margin-left: 50px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#movie-details {
+    width: 45%;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 20px;
+    border: 0px
+}
+
+#movie-details h3 {
+    color: orangered;
+    font-family: "Helvetica", "Condensed Black";
+    font-size: 40px;
+}
+
+#movie-details p {
+    font-family: "Helvetica";
+    font-size: 20px;
+    margin-bottom: 80px;
+}
+
+
+#movie-details h4 {
+    font-family: "Helvetica", "bold";
+    font-size: 20px;
+}
+
+#watched-movies {
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+    background: #019BF1;
+    color: black;
     font-size: 25px;
 }
