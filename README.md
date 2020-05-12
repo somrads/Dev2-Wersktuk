@@ -1,3 +1,5 @@
 # Dev2-Wersktuk
 
-https://app.netlify.com/teams/somrads/sites
+netlify link:
+
+https://werkstuk-somradsharma.netlify.app/log-in.html
